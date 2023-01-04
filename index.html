@@ -45,6 +45,7 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css"
@@ -268,7 +269,7 @@
       <div class="snowflake">❆</div>
       <div class="snowflake">❄</div>
       <div class="grid wide wide-low">
-        <div class="row">
+        <div class="row" data-aos="fade-down">
           <div class="col l-12 m-12">
             <!-- Giới thiệu -->
             <div class="intro">
@@ -356,7 +357,7 @@
         </div>
         <div class="row container">
           <!-- Thanh công cụ -->
-          <div class="col l-2 c-12">
+          <div class="col l-2 c-12" data-aos="fade-up-right">
             <div class="options">
               <ul class="option">
                 <li class="option-item active">
@@ -415,7 +416,7 @@
             </div>
           </div>
           <!-- Mục mở rộng tương ứng -->
-          <div class="col l-10">
+          <div class="col l-10" data-aos="fade-left">
             <div class="extends">
               <!-- Bản thân -->
               <ul class="extend active">
@@ -1103,5 +1104,29 @@
 
     <script src="./app.js"></script>
     <script src="./music.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
   </body>
 </html>
