@@ -1043,7 +1043,7 @@ input.progres {
   animation-delay: 1s, 1s;
 }
 .snowflake:nth-of-type(15) {
-  font-size: 45px;
+  font-size: 35px;
   left: 20%;
   -webkit-animation-delay: 6s, 0.5s;
   animation-delay: 6s, 0.5s;
