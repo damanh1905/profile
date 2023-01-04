@@ -16,6 +16,13 @@ const optionElements = $$(".option-item");
 const extendElements = $$(".extend");
 console.error("Đàm Văn Anh");
 
+window.addEventListener("load", () => {
+  const loader = $(".root-loader");
+  loader.classList.add("root-loader-hidden");
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(".root-loader");
+  });
+});
 optionElements.forEach((option, index) => {
   const extendElement = extendElements[index];
   option.onclick = function () {
