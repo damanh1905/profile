@@ -935,9 +935,9 @@ input.progres {
 }
 @keyframes circle1 {
   0% {
-    transform: rotate(-80deg) translate(50%, -50%);
+    transform: rotate(-67deg) translate(50%, -50%);
 
-    -webkit-transform: rotate(-45deg) translate(50%, -50%);
+    -webkit-transform: rotate(-67deg) translate(50%, -50%);
   }
   50% {
     transform: rotate(-22deg) translate(50%, -50%);
